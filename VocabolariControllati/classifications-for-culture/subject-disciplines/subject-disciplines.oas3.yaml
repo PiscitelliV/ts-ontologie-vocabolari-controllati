@@ -9,7 +9,6 @@ components:
           di base.
         id: '001.001'
         label: logica matematica
-        label_en: mathematical logic
         level: '2'
         parent:
         - id: '001'
@@ -26,10 +25,6 @@ components:
           pattern: ^[A-Za-z0-9._/-]+$
           type: string
         label:
-          maxLength: 500
-          minLength: 1
-          type: string
-        label_en:
           maxLength: 500
           minLength: 1
           type: string
@@ -69,7 +64,7 @@ components:
       - definition
       - id
       - label
-      - label_en
+
       - level
       - parent
       - scheme
@@ -84,9 +79,6 @@ components:
         label:
           '@id': skos:prefLabel
           '@language': it
-        label_en:
-          '@id': skos:prefLabel
-          '@language': en
         level:
           '@id': clvapit:hasRankOrder
         parent:
