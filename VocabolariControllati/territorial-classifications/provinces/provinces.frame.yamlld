@@ -6,7 +6,7 @@
 
 # Use context.
 "@context": &jsonld_context
-  "@base": "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/"
+  # voglio la URI estesa "@base": "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/"
   "@vocab": "https://w3id.org/italia/onto/CLV/"
 
   dct: http://purl.org/dc/terms/
