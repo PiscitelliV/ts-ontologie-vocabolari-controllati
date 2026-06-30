@@ -73,13 +73,7 @@ vocab:
   "@explicit": true
   "@embed": "@never"
 
-parent:
-- uri: {}
-  # id: {}
-  "@embed": "@always"
-  "@explicit": true
-  "@default": "@null"
-  "@requireAll": false
+region: {}
 
 nuts:
 - uri: {}
