@@ -34,6 +34,8 @@ resources:
       type: string
     - name: acronym
       type: string
+    - name: region
+      type: string
     x-jsonld-context:
       '@base': https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/
       '@vocab': https://w3id.org/italia/onto/CLV/
@@ -48,11 +50,11 @@ resources:
         '@id': skos:prefLabel
         '@language': it
       owl: http://www.w3.org/2002/07/owl#
-      parent:
-        '@container': '@set'
-        '@context':
-          uri: '@id'
-        '@id': skos:broader
+      region:
+        "@id": skos:broader
+        "@type": "@id"
+        "@context":
+          "@base": https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/
       rdfs: http://www.w3.org/2000/01/rdf-schema#
       skos: http://www.w3.org/2004/02/skos/core#
       uri: '@id'

@@ -40,12 +40,11 @@
 
   # When mapping to a list, use @container: @set
   #   to ensure that JSON-LD framing handles it as an array.
-  parent:
+  region:
     "@id": skos:broader
-    "@container": "@set"
+    "@type": "@id"
     "@context":
-      uri: "@id"
-      # id: skos:notation
+       "@base": https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/
 
   vocab:
     "@id": skos:inScheme
