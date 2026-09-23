@@ -23,7 +23,7 @@
                                     owl:versionIRI <https://w3id.org/italia/onto/CLV/2.0> ;
                                     owl:imports <https://w3id.org/italia/onto/l0> ;
                                     dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-                                    dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/ISTAT> ,
+                                    dct:creator <https://w3id.org/italia/data/public-organization/ISTAT> ,
                                                 <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/age> ,
                                                 <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid> ;
                                     dct:description "Questa è l'ontologia del profilo di italiano sugli indirizzi e i luoghi (Italian Core Location Vocabulary - Application Profile  - CLV-AP_IT)"@it ,
@@ -31,9 +31,11 @@
                                     dct:issued "2017-08-07"^^xsd:date ;
                                     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ,
                                                  <http://publications.europa.eu/resource/authority/language/ITA> ;
-                                    dct:modified "2026-09-08"^^xsd:date ;
+                                    dct:modified "2026-09-23"^^xsd:date ;
+									dct:temporal "";
+									dct:subject <http://publications.europa.eu/resource/authority/data-theme/REGI>;
                                     dct:publisher <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid> ;
-                                    dct:rightsHolder <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/ISTAT> ;
+                                    dct:rightsHolder <https://w3id.org/italia/data/public-organization/ISTAT> ;
                                     dct:title "Address(Location) Ontology"@en ,
                                               "Ontologia degli Indirizzi/Luoghi"@it ;
                                     rdfs:comment "Questa è l'ontologia del profilo di italiano sugli indirizzi e i luoghi (Italian Core Location Vocabulary - Application Profile  - CLV-AP_IT)"@it ,
@@ -41,8 +43,8 @@
                                     rdfs:isDefinedBy : ;
                                     rdfs:label "Address(Location) Ontology"@en ,
                                                "Ontologia degli Indirizzi/Luoghi"@it ;
-                                    owl:versionInfo "Version 2.0 - Modified on 08 Semptember 2026 - Alignment of the ontology with the concepts of the National Archive of Street Numbers for Urban Roads (ANNCSU) and introduction of concepts relating to Foreign States and the Territories governed by them."@en ,
-                                                    "Versione 2.0 - Modificata l' 8 Settembre 2026 - Allineamento dell'ontologia con  i concetti dell'Archivio Nazionale dei Numeri Civici delle Strade Urbane (ANNCSU) e introduzione dei concetti relativi agli Stati Esteri e ai Territori governati da essi."@it;
+                                    owl:versionInfo "Version 2.0 - Modified on 23 Semptember 2026 - Alignment of the ontology with the concepts of the National Archive of Street Numbers for Urban Roads (ANNCSU) and introduction of concepts relating to Foreign States and the Territories governed by them."@en ,
+                                                    "Versione 2.0 - Modificata il 23 Settembre 2026 - Allineamento dell'ontologia con  i concetti dell'Archivio Nazionale dei Numeri Civici delle Strade Urbane (ANNCSU) e introduzione dei concetti relativi agli Stati Esteri e ai Territori governati da essi."@it;
                                     dcat:keyword "Accesso esterno"@it ,
                                                  "Accesso interno"@it ,
                                                  "Address"@en ,
@@ -57,6 +59,7 @@
                                                  "Numero Civico"@it ,
                                                  "Spatial Object"@en ;
                                     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/REGI> ;
+									dcat:contactPoint <https://w3id.org/italia/data/contact-point/ISTAT-NDC> ;
                                     prov:wasDerivedFrom <https://w3id.org/italia/onto/CLV/1.0> ;
                                     admsapit:acronym "CLV-AP_IT" ;
                                     admsapit:hasContributor <https://w3id.org/italia/data/organization/public-organization/td> ,
@@ -85,6 +88,22 @@
                                     admsapit:target "Imprese" ,
                                                     "Pubbliche Amministrazioni" ;
                                     admsapit:type admsapit:CoreOntology .
+
+
+<https://w3id.org/italia/data/public-organization/ISTAT>
+    a dcatapit:Agent , foaf:Agent ;
+    dct:identifier "ISTAT" ;
+    foaf:name "Istituto Nazionale di Statistica - ISTAT"@it ,
+              "Italian National Institute of Statistics - ISTAT"@en .
+
+<https://w3id.org/italia/data/contact-point/ISTAT-NDC>
+    a dcatapit:Organization , vcard:Organization , vcard:Kind ;
+    vcard:fn "Segreteria Tecnica Istat - Progetto PNRR National Data Catalog" ;
+    vcard:hasEmail <mailto:ndc-segr-tec@istat.it> .
+
+
+
+
 
 #################################################################
 #    Annotation properties
@@ -169,6 +188,16 @@ xsd:time rdf:type rdfs:Datatype .
 #################################################################
 
 
+###  https://w3id.org/italia/onto/CLV/exercisesGovernanceOver
+:exercisesGovernanceOver rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ,
+                        owl:InverseFunctionalProperty ;
+               rdfs:domain :State ;
+               rdfs:range  :Country ;
+               rdfs:label "exercises governance over"@en ,
+			              "esercita il governo su"@it.
+
+
 ###  https://w3id.org/italia/onto/CLV/countryIsInContinent
 :countryIsInContinent rdf:type owl:ObjectProperty ,
                                   owl:FunctionalProperty ;
@@ -178,6 +207,17 @@ xsd:time rdf:type rdfs:Datatype .
                                       "The relationship links the Country to its corresponding Continent."@en ;
                          rdfs:label "Country is in Continent"@en ,
                                     "Lo Stato è nel Continente"@it .
+
+
+###  https://w3id.org/italia/onto/CLV/hasSovereignState
+:hasSovereignState rdf:type owl:ObjectProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain :Territory ;
+                      rdfs:range  :State ;
+                      rdfs:comment "Il territorio descritto ha stato sovrano di riferimento (Stato padre) da cui dipende amministrativamente o politicamente."@it ,
+					               "The territory described has a reference sovereign state (parent state) on which it depends administratively or politically."@en;
+                      rdfs:label "ha Stato sovrano"@it ,
+                                 "has Sovereign State"@en .
 
 
 ###  https://w3id.org/italia/onto/CLV/hasInternalAccessCode
@@ -641,6 +681,7 @@ xsd:time rdf:type rdfs:Datatype .
                                  owl:FunctionalProperty ;
                         rdfs:domain [ rdf:type owl:Class ;
                                       owl:unionOf ( :Country
+									                :SpecialTerritory
                                                     :Territory
                                                   )
                                     ] ;
@@ -1634,13 +1675,29 @@ admsapit:SemanticAssetDistribution rdf:type owl:Class .
                       "Political entity that is represented by one centralized government that has sovereignty over a geographic area and a permanent population. Example: \"Italia - Italy\" or \"United Kingdom\", etc. Within the Core Location Vocabulary of the ISA2 Programme, it represents the highest administrative unit in the territorial containment hierarchy of the address and is modelled using the address property named adminUnit1."@en ;
          rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
          rdfs:label "Country"@en ,
-                    "Stato"@it ;
+                    "Paese"@it ;
          owl:versionInfo "stabile"@it ,
                          "stable"@en ;
          prov:wasDerivedFrom skos:Concept ;
-         :hasRankOrder 1 ;
-         l0:controlledVocabulary <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries> ,
-                                 <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy> .
+         :hasRankOrder 1 .
+
+
+###  https://w3id.org/italia/onto/CLV/State
+:State rdf:type owl:Class ;
+          rdfs:subClassOf covapit:PublicOrganization ;
+          rdfs:label "State"@en ,
+                     "Stato"@it ;
+		  rdfs:comment "Soggetto di diritto internazionale (destinatario di norme di diritto internazionale) riconosciuto come tale dall’ordinamento italiano essendo costituito da un apparato politico (insieme di organi) che esercita effettivamente una sovranità su un determinato territorio e nei confronti di una popolazione e che gode di una sovranità esterna (indipendenza dagli altri Stati). Ricadono, di regola, fuori dall’ambito del concetto di Stato come soggetto di diritto internazionale: gli Stati membri di Stati federali, da considerarsi organi dello Stato federale stesso; i Governi in esilio, organizzazioni o fronti o comitati di liberazione nazionale con sede in un territorio straniero."@it,
+		               "Subject of international law (addressee of rules of international law) recognised as such by the Italian legal order, insofar as it consists of a political apparatus (a set of organs) that effectively exercises sovereignty over a given territory and population, and that enjoys external sovereignty (independence from other States). As a rule, the following fall outside the scope of the concept of State as a subject of international law: the member states of federal states, which are to be regarded as organs of the federal State itself; governments in exile; and organisations, fronts or national liberation committees based in foreign territory."@en.		  
+
+
+###  https://w3id.org/italia/onto/CLV/SpecialTerritory
+:SpecialTerritory   rdf:type owl:Class ;
+                     rdfs:comment "Area geografica speciale non assimilabile allo Stato o al Territorio"@it ,
+                                  "Special geographic area not equivalent to a State or Territory"@en ;
+                     rdfs:label "Special Territory"@en ,
+                                "Territorio Speciale"@it .
+
 
 
 ###  https://w3id.org/italia/onto/CLV/DUG
@@ -1798,14 +1855,6 @@ Due to the provisions contained in law n. 15 of August 4, 2015, the administrati
               owl:versionInfo "stabile"@it ,
                               "stable"@en .
 
-
-###  https://w3id.org/italia/onto/CLV/GovernedTerritory
-:GovernedTerritory rdf:type owl:Class ;
-                      rdfs:subClassOf :Territory ;
-                      rdfs:comment "Area geografica dipendente da uno Stato sovrano, sottoposta alla sovranità territoriale effettiva ed esclusiva di uno Stato riconosciuto, nell’ambito della quale le funzioni di governo sono esercitate in modo diretto o tramite enti territoriali dotati di autonomia, secondo l’ordinamento vigente. Costituisce unità di interesse statistico secondo le modalità definite dai regolamenti dell’Ue."@it ,
-                                   "Geographical area dependent on a sovereign State, subject to the effective and exclusive territorial sovereignty of a recognized State, within which governmental functions are exercised either directly or through autonomous territorial entities, in accordance with the applicable legal order. It constitutes a statistical unit of interest according to the provisions established by EU regulations."@en ;
-                      rdfs:label "Governed territory"@en ,
-                                 "Territorio governato"@it .
 
 
 ###  https://w3id.org/italia/onto/CLV/Identifier
@@ -2152,13 +2201,6 @@ DUF e DUG sono due proprietà obbligatorie per la classe ed è possibile specifi
                          "Territory"@en .
 
 
-###  https://w3id.org/italia/onto/CLV/UngovernedTerritory
-:UngovernedTerritory rdf:type owl:Class ;
-                        rdfs:subClassOf :Territory ;
-                        rdfs:comment "Area geografica non sottoposta alla sovranità territoriale effettiva ed esclusiva di uno Stato riconosciuto, oppure caratterizzata da un esercizio della sovranità contestato, limitato o privo di effettività, in ragione di condizioni storico-politiche, giuridiche o geopolitiche. Può costituire unità di interesse statistico secondo criteri specifici stabiliti dai regolamenti dell’Ue."@it ,
-                                     "Geographical area not subject to the effective and exclusive territorial sovereignty of a recognized State, or characterized by a contested, limited, or ineffective exercise of sovereignty, due to historical-political, legal, or geopolitical conditions. It may constitute a statistical unit of interest according to specific criteria established by EU regulations."@en ;
-                        rdfs:label "Territorio non governato"@it ,
-                                   "Ungoverned territory"@en .
 
 
 ###  https://w3id.org/italia/onto/COV/Organization
@@ -2340,6 +2382,10 @@ l0:Location rdf:type owl:Class .
                     "Polygon"@en .
 
 
+###  https://w3id.org/italia/onto/COV/PublicOrganization
+covapit:PublicOrganization rdf:type owl:Class .
+
+
 #################################################################
 #    General axioms
 
@@ -2369,5 +2415,12 @@ l0:Location rdf:type owl:Class .
                 :FreeMunicipalConsortium
                 :MetropolitanCity
                 :Non-administrativeUnit
+              )
+] .
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Country
+                :SpecialTerritory
+                :Territory
               )
 ] .
