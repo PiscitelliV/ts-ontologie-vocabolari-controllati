@@ -13,12 +13,12 @@
 }, {
   "@id" : "_:genid100",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/building"
+    "@id" : "https://w3id.org/italia/onto/CLV/flatNumber"
   } ]
 }, {
   "@id" : "_:genid101",
@@ -28,7 +28,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/exponent"
+    "@id" : "https://w3id.org/italia/onto/CLV/building"
   } ]
 }, {
   "@id" : "_:genid102",
@@ -38,7 +38,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/floor"
+    "@id" : "https://w3id.org/italia/onto/CLV/exponent"
   } ]
 }, {
   "@id" : "_:genid103",
@@ -48,10 +48,20 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/yard"
+    "@id" : "https://w3id.org/italia/onto/CLV/floor"
   } ]
 }, {
   "@id" : "_:genid104",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/italia/onto/CLV/yard"
+  } ]
+}, {
+  "@id" : "_:genid105",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/City"
@@ -60,16 +70,16 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasDirectLowerRank"
   } ]
 }, {
-  "@id" : "_:genid105",
+  "@id" : "_:genid106",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid106"
+    "@id" : "_:genid107"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasLowerRank"
   } ]
 }, {
-  "@id" : "_:genid106",
+  "@id" : "_:genid107",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -79,24 +89,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid109",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/Region"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/hasDirectHigherRank"
-  } ]
-}, {
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/italia/onto/CLV/Country"
+    }, {
+      "@id" : "https://w3id.org/italia/onto/CLV/SpecialTerritory"
     }, {
       "@id" : "https://w3id.org/italia/onto/CLV/Territory"
     } ]
@@ -109,13 +108,26 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid111"
+    "@id" : "https://w3id.org/italia/onto/CLV/Region"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/italia/onto/CLV/hasDirectHigherRank"
+  } ]
+}, {
+  "@id" : "_:genid111",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid112"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasHigherRank"
   } ]
 }, {
-  "@id" : "_:genid111",
+  "@id" : "_:genid112",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -125,7 +137,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid114",
+  "@id" : "_:genid115",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -135,7 +147,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/acronym"
   } ]
 }, {
-  "@id" : "_:genid115",
+  "@id" : "_:genid116",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/Province"
@@ -144,16 +156,16 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasDirectLowerRank"
   } ]
 }, {
-  "@id" : "_:genid116",
+  "@id" : "_:genid117",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid117"
+    "@id" : "_:genid118"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasLowerRank"
   } ]
 }, {
-  "@id" : "_:genid117",
+  "@id" : "_:genid118",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -165,7 +177,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid121",
+  "@id" : "_:genid122",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -178,7 +190,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasDirectHigherRank"
   } ]
 }, {
-  "@id" : "_:genid122",
+  "@id" : "_:genid123",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasIdentifier"
@@ -187,7 +199,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/Identifier"
   } ]
 }, {
-  "@id" : "_:genid123",
+  "@id" : "_:genid124",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasDUG"
@@ -196,7 +208,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
-  "@id" : "_:genid124",
+  "@id" : "_:genid125",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/municipalResolutionDate"
@@ -205,7 +217,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid125",
+  "@id" : "_:genid126",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/municipalResolutionProtocol"
@@ -214,7 +226,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid126",
+  "@id" : "_:genid127",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/officialStreetName"
@@ -223,7 +235,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid127",
+  "@id" : "_:genid128",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/prefecturalAuthorizationDate"
@@ -232,7 +244,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid128",
+  "@id" : "_:genid129",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/prefecturalAuthorizationProtocol"
@@ -241,7 +253,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid129",
+  "@id" : "_:genid130",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/streetNameInsertionDate"
@@ -250,7 +262,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid130",
+  "@id" : "_:genid131",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/toponymQualifier"
@@ -259,7 +271,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid131",
+  "@id" : "_:genid132",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/TI/atTime"
@@ -268,7 +280,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
-  "@id" : "_:genid132",
+  "@id" : "_:genid133",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -278,7 +290,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/odonimoNonInLinguaItaliana"
   } ]
 }, {
-  "@id" : "_:genid133",
+  "@id" : "_:genid134",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/Province"
@@ -295,7 +307,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid138",
+  "@id" : "_:genid139",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AddressComplianceStatus"
@@ -308,17 +320,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/italia/onto/CLV/CivicNumbering"
-    }, {
-      "@id" : "https://w3id.org/italia/onto/CLV/InternalAccess"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid141",
+  "@id" : "_:genid142",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -332,19 +334,26 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "https://w3id.org/italia/onto/l0/controlledVocabulary"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "https://w3id.org/italia/onto/l0/identifier"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities"
-  } ],
-  "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV"
+  "@id" : "_:genid147",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/italia/onto/CLV/Country"
+    }, {
+      "@id" : "https://w3id.org/italia/onto/CLV/SpecialTerritory"
+    }, {
+      "@id" : "https://w3id.org/italia/onto/CLV/Territory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/italia/onto/CLV/CivicNumbering"
+    }, {
+      "@id" : "https://w3id.org/italia/onto/CLV/InternalAccess"
+    } ]
   } ]
 }, {
   "@id" : "_:genid18",
@@ -356,7 +365,7 @@
     "@id" : "https://w3id.org/italia/onto/l0/identifier"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces"
+    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities"
   } ],
   "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV"
@@ -371,7 +380,7 @@
     "@id" : "https://w3id.org/italia/onto/l0/identifier"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions"
+    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces"
   } ],
   "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV"
@@ -386,7 +395,7 @@
     "@id" : "https://w3id.org/italia/onto/l0/identifier"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries"
+    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions"
   } ],
   "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV"
@@ -401,7 +410,7 @@
     "@id" : "https://w3id.org/italia/onto/l0/identifier"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"
+    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries"
   } ],
   "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV"
@@ -413,10 +422,10 @@
     "@id" : "https://w3id.org/italia/onto/l0/controlledVocabulary"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "https://w3id.org/italia/onto/l0/name"
+    "@id" : "https://w3id.org/italia/onto/l0/identifier"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities"
+    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"
   } ],
   "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV"
@@ -431,7 +440,7 @@
     "@id" : "https://w3id.org/italia/onto/l0/name"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces"
+    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities"
   } ],
   "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV"
@@ -446,7 +455,7 @@
     "@id" : "https://w3id.org/italia/onto/l0/name"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions"
+    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces"
   } ],
   "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV"
@@ -461,7 +470,7 @@
     "@id" : "https://w3id.org/italia/onto/l0/name"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries"
+    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions"
   } ],
   "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV"
@@ -476,13 +485,28 @@
     "@id" : "https://w3id.org/italia/onto/l0/name"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"
+    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries"
   } ],
   "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV"
   } ]
 }, {
   "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "https://w3id.org/italia/onto/l0/controlledVocabulary"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "https://w3id.org/italia/onto/l0/name"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"
+  } ],
+  "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
+    "@id" : "https://w3id.org/italia/onto/CLV"
+  } ]
+}, {
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasAddressComplianceStatus"
@@ -491,7 +515,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/addressInsertionDate"
@@ -500,7 +524,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasAddressComponent"
@@ -509,7 +533,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/AddressComponent"
   } ]
 }, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/InternalAccess"
@@ -518,7 +542,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasInternalAccess"
   } ]
 }, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -527,7 +551,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/isAddressFor"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/CivicNumbering"
@@ -540,7 +564,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/StreetToponym"
@@ -553,7 +577,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -566,7 +590,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasAdressinTime"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -579,7 +603,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasCensusSection"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -589,7 +613,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/fullAddress"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -599,7 +623,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/postCode"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/l0/name"
@@ -608,21 +632,21 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "_:genid40"
+    "@id" : "_:genid41"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid41",
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasAddressComplianceStatus"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/addressComplianceStatusValue"
@@ -631,7 +655,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AddressComponent"
@@ -640,7 +664,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/situatedWithin"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/TI/atTime"
@@ -649,7 +673,7 @@
     "@id" : "https://w3id.org/italia/onto/TI/TimeInterval"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AddressInTime"
@@ -658,7 +682,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/nextAddress"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AddressInTime"
@@ -667,7 +691,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/prevAddress"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/Address"
@@ -680,7 +704,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/l0/name"
@@ -689,7 +713,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid48",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/District"
@@ -698,16 +722,16 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasDirectLowerRank"
   } ]
 }, {
-  "@id" : "_:genid49",
+  "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid50"
+    "@id" : "_:genid51"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasHigherRank"
   } ]
 }, {
-  "@id" : "_:genid50",
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -719,7 +743,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -732,7 +756,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasDirectHigherRank"
   } ]
 }, {
-  "@id" : "_:genid55",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -745,7 +769,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -755,7 +779,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/exponent"
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -765,7 +789,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/metric"
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -775,7 +799,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/peculiarity"
   } ]
 }, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/Region"
@@ -784,16 +808,16 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasDirectLowerRank"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid61"
+    "@id" : "_:genid62"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasLowerRank"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -807,7 +831,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid66",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasDUGStatus"
@@ -816,7 +840,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/DUGScope"
@@ -825,26 +849,13 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid68",
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/DUGStatusValue"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
-  "@id" : "_:genid69",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/City"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/hasDirectHigherRank"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -866,13 +877,26 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid71"
+    "@id" : "https://w3id.org/italia/onto/CLV/City"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/italia/onto/CLV/hasDirectHigherRank"
+  } ]
+}, {
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid72"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasHigherRank"
   } ]
 }, {
-  "@id" : "_:genid71",
+  "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -886,7 +910,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid76",
+  "@id" : "_:genid77",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/Geometry"
@@ -895,7 +919,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasGeometry"
   } ]
 }, {
-  "@id" : "_:genid77",
+  "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/TI/TimeInterval"
@@ -904,20 +928,20 @@
     "@id" : "https://w3id.org/italia/onto/CLV/hasSOValidity"
   } ]
 }, {
-  "@id" : "_:genid78",
+  "@id" : "_:genid79",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "_:genid79"
+    "@id" : "_:genid80"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/TI/modified"
   } ]
 }, {
-  "@id" : "_:genid79",
+  "@id" : "_:genid80",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -929,7 +953,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid83",
+  "@id" : "_:genid84",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/GeometryType"
@@ -942,7 +966,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid84",
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -952,7 +976,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/lat"
   } ]
 }, {
-  "@id" : "_:genid85",
+  "@id" : "_:genid86",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -962,7 +986,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/long"
   } ]
 }, {
-  "@id" : "_:genid86",
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -972,7 +996,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/alt"
   } ]
 }, {
-  "@id" : "_:genid87",
+  "@id" : "_:genid88",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -982,7 +1006,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/coordinate"
   } ]
 }, {
-  "@id" : "_:genid88",
+  "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -992,7 +1016,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/coordinateSystem"
   } ]
 }, {
-  "@id" : "_:genid89",
+  "@id" : "_:genid90",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1002,7 +1026,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/serialization"
   } ]
 }, {
-  "@id" : "_:genid90",
+  "@id" : "_:genid91",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/italia/onto/COV/Organization"
@@ -1011,7 +1035,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/issuedBy"
   } ]
 }, {
-  "@id" : "_:genid91",
+  "@id" : "_:genid92",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1021,7 +1045,7 @@
     "@id" : "https://w3id.org/italia/onto/l0/identifier"
   } ]
 }, {
-  "@id" : "_:genid92",
+  "@id" : "_:genid93",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1031,7 +1055,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/identifierType"
   } ]
 }, {
-  "@id" : "_:genid93",
+  "@id" : "_:genid94",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/hasInternalAccessCode"
@@ -1040,7 +1064,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
-  "@id" : "_:genid94",
+  "@id" : "_:genid95",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/refersToExternalAccess"
@@ -1049,7 +1073,7 @@
     "@id" : "https://w3id.org/italia/onto/CLV/Address"
   } ]
 }, {
-  "@id" : "_:genid95",
+  "@id" : "_:genid96",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/TI/atTime"
@@ -1058,7 +1082,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
-  "@id" : "_:genid96",
+  "@id" : "_:genid97",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/internalNumberInsertionDate"
@@ -1067,7 +1091,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid97",
+  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/internalNumberUpdateDate"
@@ -1076,23 +1100,13 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid98",
+  "@id" : "_:genid99",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/staircase"
-  } ]
-}, {
-  "@id" : "_:genid99",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/flatNumber"
   } ]
 }, {
   "@id" : "http://dati.gov.it/onto/dcatapit#Agent",
@@ -1132,6 +1146,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/rightsHolder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/subject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/temporal",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/title",
@@ -1212,6 +1232,9 @@
   "@id" : "http://www.w3.org/ns/dcat#accessURL",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.w3.org/ns/dcat#contactPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/ns/dcat#downloadURL",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -1232,6 +1255,22 @@
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/name",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/italia/data/contact-point/ISTAT-NDC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://dati.gov.it/onto/dcatapit#Organization"
+  }, {
+    "@id" : "http://www.w3.org/2006/vcard/ns#Kind"
+  }, {
+    "@id" : "http://www.w3.org/2006/vcard/ns#Organization"
+  } ],
+  "http://www.w3.org/2006/vcard/ns#fn" : [ {
+    "@value" : "Segreteria Tecnica Istat - Progetto PNRR National Data Catalog"
+  } ],
+  "http://www.w3.org/2006/vcard/ns#hasEmail" : [ {
+    "@id" : "mailto:ndc-segr-tec@istat.it"
+  } ]
 }, {
   "@id" : "https://w3id.org/italia/data/contact-point/onto-agid",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
@@ -1409,6 +1448,24 @@
     "@value" : "OntoPiA - la rete di ontologie della pubblica amministrazione italiana"
   } ]
 }, {
+  "@id" : "https://w3id.org/italia/data/public-organization/ISTAT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "ISTAT"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://dati.gov.it/onto/dcatapit#Agent"
+  }, {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "it",
+    "@value" : "Istituto Nazionale di Statistica - ISTAT"
+  }, {
+    "@language" : "en",
+    "@value" : "Italian National Institute of Statistics - ISTAT"
+  } ]
+}, {
   "@id" : "https://w3id.org/italia/onto/ADMS/Project",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -1466,11 +1523,11 @@
     "@id" : "http://publications.europa.eu/resource/authority/frequency/IRREG"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@id" : "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/ISTAT"
-  }, {
     "@id" : "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/age"
   }, {
     "@id" : "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
+  }, {
+    "@id" : "https://w3id.org/italia/data/public-organization/ISTAT"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "it",
@@ -1493,13 +1550,19 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-09-08"
+    "@value" : "2026-09-23"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
   } ],
   "http://purl.org/dc/terms/rightsHolder" : [ {
-    "@id" : "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/ISTAT"
+    "@id" : "https://w3id.org/italia/data/public-organization/ISTAT"
+  } ],
+  "http://purl.org/dc/terms/subject" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/data-theme/REGI"
+  } ],
+  "http://purl.org/dc/terms/temporal" : [ {
+    "@value" : ""
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -1536,10 +1599,13 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version 2.0 - Modified on 08 Semptember 2026 - Alignment of the ontology with the concepts of the National Archive of Street Numbers for Urban Roads (ANNCSU) and introduction of concepts relating to Foreign States and the Territories governed by them."
+    "@value" : "Version 2.0 - Modified on 23 Semptember 2026 - Alignment of the ontology with the concepts of the National Archive of Street Numbers for Urban Roads (ANNCSU) and introduction of concepts relating to Foreign States and the Territories governed by them."
   }, {
     "@language" : "it",
-    "@value" : "Versione 2.0 - Modificata l' 8 Settembre 2026 - Allineamento dell'ontologia con  i concetti dell'Archivio Nazionale dei Numeri Civici delle Strade Urbane (ANNCSU) e introduzione dei concetti relativi agli Stati Esteri e ai Territori governati da essi."
+    "@value" : "Versione 2.0 - Modificata il 23 Settembre 2026 - Allineamento dell'ontologia con  i concetti dell'Archivio Nazionale dei Numeri Civici delle Strade Urbane (ANNCSU) e introduzione dei concetti relativi agli Stati Esteri e ai Territori governati da essi."
+  } ],
+  "http://www.w3.org/ns/dcat#contactPoint" : [ {
+    "@id" : "https://w3id.org/italia/data/contact-point/ISTAT-NDC"
   } ],
   "http://www.w3.org/ns/dcat#keyword" : [ {
     "@language" : "it",
@@ -1682,8 +1748,6 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/Feature"
   }, {
-    "@id" : "_:genid29"
-  }, {
     "@id" : "_:genid30"
   }, {
     "@id" : "_:genid31"
@@ -1699,6 +1763,8 @@
     "@id" : "_:genid36"
   }, {
     "@id" : "_:genid37"
+  }, {
+    "@id" : "_:genid38"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AddressComponent"
@@ -1706,9 +1772,9 @@
     "@id" : "https://w3id.org/italia/onto/CLV/CensusSection"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid27"
-  }, {
     "@id" : "_:genid28"
+  }, {
+    "@id" : "_:genid29"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -1745,7 +1811,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AddressComponent"
   }, {
-    "@id" : "_:genid38"
+    "@id" : "_:genid39"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -1778,9 +1844,9 @@
     "@id" : "https://w3id.org/italia/onto/TI/TimeIndexedEvent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid40"
   }, {
-    "@id" : "_:genid41"
+    "@id" : "_:genid42"
   } ]
 }, {
   "@id" : "https://w3id.org/italia/onto/CLV/AddressComponent",
@@ -1805,7 +1871,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/Feature"
   }, {
-    "@id" : "_:genid42"
+    "@id" : "_:genid43"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/CensusSection"
@@ -1843,13 +1909,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/l0/EventOrSituation"
   }, {
-    "@id" : "_:genid43"
-  }, {
     "@id" : "_:genid44"
   }, {
     "@id" : "_:genid45"
   }, {
     "@id" : "_:genid46"
+  }, {
+    "@id" : "_:genid47"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -1881,7 +1947,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AddressComponent"
   }, {
-    "@id" : "_:genid47"
+    "@id" : "_:genid48"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/CivicNumbering"
@@ -1985,11 +2051,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AdminUnitComponent"
   }, {
-    "@id" : "_:genid48"
-  }, {
     "@id" : "_:genid49"
   }, {
-    "@id" : "_:genid54"
+    "@id" : "_:genid50"
+  }, {
+    "@id" : "_:genid55"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -2037,13 +2103,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/l0/Characteristic"
   }, {
-    "@id" : "_:genid55"
-  }, {
     "@id" : "_:genid56"
   }, {
     "@id" : "_:genid57"
   }, {
     "@id" : "_:genid58"
+  }, {
+    "@id" : "_:genid59"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -2130,14 +2196,14 @@
     "@value" : "Country"
   }, {
     "@language" : "it",
-    "@value" : "Stato"
+    "@value" : "Paese"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AdminUnitComponent"
   }, {
-    "@id" : "_:genid59"
-  }, {
     "@id" : "_:genid60"
+  }, {
+    "@id" : "_:genid61"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/Territory"
@@ -2155,11 +2221,6 @@
   "https://w3id.org/italia/onto/CLV/hasRankOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "1"
-  } ],
-  "https://w3id.org/italia/onto/l0/controlledVocabulary" : [ {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries"
-  }, {
-    "@id" : "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"
   } ]
 }, {
   "@id" : "https://w3id.org/italia/onto/CLV/DUG",
@@ -2179,9 +2240,9 @@
     "@value" : "Generic urban denomination"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid66"
-  }, {
     "@id" : "_:genid67"
+  }, {
+    "@id" : "_:genid68"
   } ]
 }, {
   "@id" : "https://w3id.org/italia/onto/CLV/DUGScope",
@@ -2227,7 +2288,7 @@
     "@id" : "https://w3id.org/italia/onto/TI/TimeIndexedEvent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid68"
+    "@id" : "_:genid69"
   } ]
 }, {
   "@id" : "https://w3id.org/italia/onto/CLV/DUGStatusValue",
@@ -2278,9 +2339,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AdminUnitComponent"
   }, {
-    "@id" : "_:genid69"
-  }, {
     "@id" : "_:genid70"
+  }, {
+    "@id" : "_:genid71"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -2319,11 +2380,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/SpatialObject"
   }, {
-    "@id" : "_:genid76"
-  }, {
     "@id" : "_:genid77"
   }, {
     "@id" : "_:genid78"
+  }, {
+    "@id" : "_:genid79"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/Geometry"
@@ -2413,8 +2474,6 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/SpatialObject"
   }, {
-    "@id" : "_:genid83"
-  }, {
     "@id" : "_:genid84"
   }, {
     "@id" : "_:genid85"
@@ -2426,6 +2485,8 @@
     "@id" : "_:genid88"
   }, {
     "@id" : "_:genid89"
+  }, {
+    "@id" : "_:genid90"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -2471,26 +2532,6 @@
     "@value" : "stable"
   } ]
 }, {
-  "@id" : "https://w3id.org/italia/onto/CLV/GovernedTerritory",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "it",
-    "@value" : "Area geografica dipendente da uno Stato sovrano, sottoposta alla sovranità territoriale effettiva ed esclusiva di uno Stato riconosciuto, nell’ambito della quale le funzioni di governo sono esercitate in modo diretto o tramite enti territoriali dotati di autonomia, secondo l’ordinamento vigente. Costituisce unità di interesse statistico secondo le modalità definite dai regolamenti dell’Ue."
-  }, {
-    "@language" : "en",
-    "@value" : "Geographical area dependent on a sovereign State, subject to the effective and exclusive territorial sovereignty of a recognized State, within which governmental functions are exercised either directly or through autonomous territorial entities, in accordance with the applicable legal order. It constitutes a statistical unit of interest according to the provisions established by EU regulations."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Governed territory"
-  }, {
-    "@language" : "it",
-    "@value" : "Territorio governato"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/Territory"
-  } ]
-}, {
   "@id" : "https://w3id.org/italia/onto/CLV/Identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2516,11 +2557,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/l0/Characteristic"
   }, {
-    "@id" : "_:genid90"
-  }, {
     "@id" : "_:genid91"
   }, {
     "@id" : "_:genid92"
+  }, {
+    "@id" : "_:genid93"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -2555,8 +2596,6 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/l0/Characteristic"
   }, {
-    "@id" : "_:genid94"
-  }, {
     "@id" : "_:genid95"
   }, {
     "@id" : "_:genid96"
@@ -2574,9 +2613,11 @@
     "@id" : "_:genid102"
   }, {
     "@id" : "_:genid103"
+  }, {
+    "@id" : "_:genid104"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid93"
+    "@id" : "_:genid94"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -2707,15 +2748,15 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AdminUnitComponent"
   }, {
-    "@id" : "_:genid104"
-  }, {
     "@id" : "_:genid105"
   }, {
-    "@id" : "_:genid109"
+    "@id" : "_:genid106"
   }, {
     "@id" : "_:genid110"
   }, {
-    "@id" : "_:genid114"
+    "@id" : "_:genid111"
+  }, {
+    "@id" : "_:genid115"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -2757,11 +2798,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AdminUnitComponent"
   }, {
-    "@id" : "_:genid115"
-  }, {
     "@id" : "_:genid116"
   }, {
-    "@id" : "_:genid121"
+    "@id" : "_:genid117"
+  }, {
+    "@id" : "_:genid122"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -2803,7 +2844,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/l0/Location"
   }, {
-    "@id" : "_:genid122"
+    "@id" : "_:genid123"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -2836,6 +2877,43 @@
     "@id" : "https://w3id.org/italia/onto/CLV/Region"
   } ]
 }, {
+  "@id" : "https://w3id.org/italia/onto/CLV/SpecialTerritory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Area geografica speciale non assimilabile allo Stato o al Territorio"
+  }, {
+    "@language" : "en",
+    "@value" : "Special geographic area not equivalent to a State or Territory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Special Territory"
+  }, {
+    "@language" : "it",
+    "@value" : "Territorio Speciale"
+  } ]
+}, {
+  "@id" : "https://w3id.org/italia/onto/CLV/State",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Soggetto di diritto internazionale (destinatario di norme di diritto internazionale) riconosciuto come tale dall’ordinamento italiano essendo costituito da un apparato politico (insieme di organi) che esercita effettivamente una sovranità su un determinato territorio e nei confronti di una popolazione e che gode di una sovranità esterna (indipendenza dagli altri Stati). Ricadono, di regola, fuori dall’ambito del concetto di Stato come soggetto di diritto internazionale: gli Stati membri di Stati federali, da considerarsi organi dello Stato federale stesso; i Governi in esilio, organizzazioni o fronti o comitati di liberazione nazionale con sede in un territorio straniero."
+  }, {
+    "@language" : "en",
+    "@value" : "Subject of international law (addressee of rules of international law) recognised as such by the Italian legal order, insofar as it consists of a political apparatus (a set of organs) that effectively exercises sovereignty over a given territory and population, and that enjoys external sovereignty (independence from other States). As a rule, the following fall outside the scope of the concept of State as a subject of international law: the member states of federal states, which are to be regarded as organs of the federal State itself; governments in exile; and organisations, fronts or national liberation committees based in foreign territory."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "State"
+  }, {
+    "@language" : "it",
+    "@value" : "Stato"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/italia/onto/COV/PublicOrganization"
+  } ]
+}, {
   "@id" : "https://w3id.org/italia/onto/CLV/StreetToponym",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2864,13 +2942,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AddressComponent"
   }, {
-    "@id" : "_:genid131"
-  }, {
     "@id" : "_:genid132"
+  }, {
+    "@id" : "_:genid133"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid123"
-  }, {
     "@id" : "_:genid124"
   }, {
     "@id" : "_:genid125"
@@ -2884,6 +2960,8 @@
     "@id" : "_:genid129"
   }, {
     "@id" : "_:genid130"
+  }, {
+    "@id" : "_:genid131"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "it",
@@ -2934,26 +3012,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV/AdminUnitComponent"
-  } ]
-}, {
-  "@id" : "https://w3id.org/italia/onto/CLV/UngovernedTerritory",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "it",
-    "@value" : "Area geografica non sottoposta alla sovranità territoriale effettiva ed esclusiva di uno Stato riconosciuto, oppure caratterizzata da un esercizio della sovranità contestato, limitato o privo di effettività, in ragione di condizioni storico-politiche, giuridiche o geopolitiche. Può costituire unità di interesse statistico secondo criteri specifici stabiliti dai regolamenti dell’Ue."
-  }, {
-    "@language" : "en",
-    "@value" : "Geographical area not subject to the effective and exclusive territorial sovereignty of a recognized State, or characterized by a contested, limited, or ineffective exercise of sovereignty, due to historical-political, legal, or geopolitical conditions. It may constitute a statistical unit of interest according to specific criteria established by EU regulations."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "it",
-    "@value" : "Territorio non governato"
-  }, {
-    "@language" : "en",
-    "@value" : "Ungoverned territory"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/italia/onto/CLV/Territory"
   } ]
 }, {
   "@id" : "https://w3id.org/italia/onto/CLV/acronym",
@@ -3228,6 +3286,22 @@
     "@id" : "https://w3id.org/italia/onto/CLV/Continent"
   } ]
 }, {
+  "@id" : "https://w3id.org/italia/onto/CLV/exercisesGovernanceOver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/italia/onto/CLV/State"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "esercita il governo su"
+  }, {
+    "@language" : "en",
+    "@value" : "exercises governance over"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/italia/onto/CLV/Country"
+  } ]
+}, {
   "@id" : "https://w3id.org/italia/onto/CLV/exponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3238,7 +3312,7 @@
     "@value" : "When available, it represents the literal part of the number of the address. It can be used associated with both the external and internal number."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid14"
+    "@id" : "_:genid15"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/italia/onto/CLV"
@@ -4278,6 +4352,29 @@
   }, {
     "@language" : "en",
     "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://w3id.org/italia/onto/CLV/hasSovereignState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Il territorio descritto ha stato sovrano di riferimento (Stato padre) da cui dipende amministrativamente o politicamente."
+  }, {
+    "@language" : "en",
+    "@value" : "The territory described has a reference sovereign state (parent state) on which it depends administratively or politically."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/italia/onto/CLV/Territory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "ha Stato sovrano"
+  }, {
+    "@language" : "en",
+    "@value" : "has Sovereign State"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/italia/onto/CLV/State"
   } ]
 }, {
   "@id" : "https://w3id.org/italia/onto/CLV/hasSpatialCoverage",
@@ -5399,6 +5496,9 @@
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/italia/onto/COV/"
   } ]
+}, {
+  "@id" : "https://w3id.org/italia/onto/COV/PublicOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/italia/onto/TI/TimeIndexedEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
